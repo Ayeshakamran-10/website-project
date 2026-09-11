@@ -36,7 +36,7 @@ document.getElementById("contactForm").addEventListener("submit", function(event
         "https://wa.me/" +
         phoneNumber +
         "?text=" +
-        encodeURIComponent(order);
+        encodeURIComponent(message);
 
     window.location.href = whatsappLink;
 
