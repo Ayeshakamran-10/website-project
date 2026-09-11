@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,352 +6,184 @@
     <title>DOM Restaurant</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header>
-
     <div class="logo">
         <img src="dom logo.jpg" alt="DOM Restaurant Logo">
     </div>
 
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#menu">Menu</a>
-        <a href="#about">About</a>
-        <a href="#order">order</a>
+    <nav id="navMenu">
+        <a href="#home" onclick="closeMenu()">Home</a>
+        <a href="#menu" onclick="closeMenu()">Menu</a>
+        <a href="#about" onclick="closeMenu()">About</a>
+        <a href="#contact" onclick="closeMenu()">Order</a>
     </nav>
 
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
 </header>
 
 <section id="home" class="main-banner">
-
-    <img class="banner" src="pizza banner.jpeg" alt="DOM Restaurant Banner">
-
-        
+    <img class="banner" src="dom banner3.jpeg" alt="DOM Restaurant Banner">
 </section>
 
 <main id="menu" class="menu">
-
     <h1>Our Menu</h1>
-
-    <p class="menu-intro">
-        Enjoy our delicious food and special deals.
-    </p>
-
-
+    <p class="menu-intro">Enjoy our delicious food and special deals.</p>
+    
     <section class="menu-category">
-
         <h2>Pizza</h2>
-
         <div class="menu-container">
-
             <div class="food">
                 <img src="large pizza.jpeg" alt="Large Pizza">
-
                 <h3>Large Pizza</h3>
-
                 <p>Delicious large pizza with fresh toppings and cheese.</p>
-
                 <p class="price">Rs. 850</p>
-
                 <button onclick="orderFood('Large Pizza')">+</button>
             </div>
-
-
             <div class="food">
                 <img src="pizza.jpeg" alt="Medium Pizza">
-
                 <h3>Medium Pizza</h3>
-
                 <p>Cheesy medium pizza with delicious toppings.</p>
-
                 <p class="price">Rs. 550</p>
-
                 <button onclick="orderFood('Medium Pizza')">+</button>
             </div>
-
-
             <div class="food">
                 <img src="small pizza .jpeg" alt="Small Pizza">
-
                 <h3>Small Pizza</h3>
-
                 <p>Perfectly sized pizza with tasty toppings.</p>
-
                 <p class="price">Rs. 300</p>
-
                 <button onclick="orderFood('Small Pizza')">+</button>
             </div>
-
         </div>
-
     </section>
-
-
+    
     <section class="menu-category">
-
         <h2>Appetizers</h2>
-
         <div class="menu-container">
-
             <div class="food">
                 <img src="pasta large.jpeg" alt="Large Pasta">
-
                 <h3>Large Pasta</h3>
-
                 <p>Creamy and delicious pasta prepared with fresh ingredients.</p>
-
                 <p class="price">Rs. 450</p>
-
                 <button onclick="orderFood('Large Pasta')">+</button>
             </div>
-
-
             <div class="food">
                 <img src="small pasta.jpeg" alt="Small Pasta">
-
                 <h3>Small Pasta</h3>
-
                 <p>A tasty portion of creamy and flavorful pasta.</p>
-
                 <p class="price">Rs. 250</p>
-
                 <button onclick="orderFood('Small Pasta')">+</button>
             </div>
-
-
             <div class="food">
                 <img src="lasagne.jpg" alt="Large Lasagne">
-
                 <h3>Large Lasagne</h3>
-
                 <p>Layers of delicious pasta, sauce and cheese.</p>
-
                 <p class="price">Rs. 450</p>
-
                 <button onclick="orderFood('Large Lasagne')">+</button>
             </div>
-
-
             <div class="food">
                 <img src="small.jpeg" alt="Small Lasagne">
-
                 <h3>Small Lasagne</h3>
-
                 <p>Cheesy and flavorful lasagne in a smaller portion.</p>
-
                 <p class="price">Rs. 250</p>
-
                 <button onclick="orderFood('Small Lasagne')">+</button>
             </div>
-
-
             <div class="food">
                 <img src="pizza roll .jpeg" alt="Pizza Roll">
-
                 <h3>Pizza Roll</h3>
-
                 <p>Crispy roll filled with delicious pizza flavors.</p>
-
                 <p class="price">Rs. 200</p>
-
                 <button onclick="orderFood('Pizza Roll')">+</button>
             </div>
-
         </div>
-
     </section>
-
+    
     <section class="menu-category">
-
         <h2>Fries</h2>
-
         <div class="menu-container">
-
             <div class="food">
                 <img src="p p.jpeg" alt="Pizza Fries">
-
                 <h3>Pizza Fries</h3>
-
                 <p>Crispy fries loaded with delicious pizza toppings.</p>
-
                 <p class="price">Rs. 400</p>
-
                 <button onclick="orderFood('Pizza Fries')">+</button>
             </div>
-
-
             <div class="food">
                 <img src="fries.jpeg" alt="Cheese Fries">
-
                 <h3>Cheese Fries</h3>
-
                 <p>Crispy fries covered with creamy melted cheese.</p>
-
                 <p class="price">Rs. 300</p>
-
                 <button onclick="orderFood('Cheese Fries')">+</button>
             </div>
-
         </div>
-
     </section>
-
+    
     <section class="menu-category">
-
         <h2>Deals</h2>
-
         <div class="menu-container">
-
             <div class="food">
                 <img src="family.jpeg" alt="Family Deal">
-
                 <h3>Family Deal</h3>
-
                 <p>A delicious deal perfect for sharing with family.</p>
-
                 <p class="price">Rs. 1500</p>
-
                 <button onclick="orderFood('Family Deal')">+</button>
             </div>
-
-
             <div class="food">
                 <img src="dhamaka.jpeg" alt="Dhamaka Deal">
-
                 <h3>Dhamaka Deal</h3>
-
                 <p>A special deal packed with delicious food.</p>
-
                 <p class="price">Rs. 1000</p>
-
                 <button onclick="orderFood('Dhamaka Deal')">+</button>
             </div>
-
-
             <div class="food">
                 <img src="zinger.jpeg" alt="Zinger Deal">
-
                 <h3>Zinger Deal</h3>
-
                 <p>Crispy zinger burger deal with tasty sides.</p>
-
                 <p class="price">Rs. 1000</p>
-
                 <button onclick="orderFood('Zinger Deal')">+</button>
             </div>
-
-
             <div class="food">
                 <img src="lava pizza.jpeg" alt="Lava Pizza">
-
                 <h3>Lava Pizza</h3>
-
                 <p>Hot and cheesy pizza with a delicious lava filling.</p>
-
                 <p class="price">Rs. 600</p>
-
                 <button onclick="orderFood('Lava Pizza')">+</button>
             </div>
-
         </div>
-
     </section>
-
 </main>
 
 <section id="about" class="about">
-
     <h2>About DOM Restaurant</h2>
-
-    <p>
-        DOM Restaurant is a place where great food meets a friendly
-        atmosphere. We prepare fresh and delicious meals for our
-        customers and aim to provide an enjoyable dining experience.
-    </p>
-
-    <p>
-        Visit us in Mosalane and enjoy your favorite meals with
-        family and friends.
-    </p>
-
+    <p>DOM Restaurant is a place where great food meets a friendly atmosphere. We prepare fresh and delicious meals for our customers and aim to provide an enjoyable dining experience.</p>
+    <p>Visit us in Mosalane and enjoy your favorite meals with family and friends.</p>
 </section>
 
 <section id="contact" class="contact">
-
     <h2>Place your order</h2>
-
     <form id="contactForm">
-
-        <input
-            type="text"
-            id="name"
-            placeholder="Your Name"
-            required
-        >
-
-        <input
-            type="email"
-            id="email"
-            placeholder="Your Email"
-            required
-        >
-
-        <textarea
-            id="order"
-            placeholder="Your order"
-            required
-        ></textarea>
-
-         <textarea
-            id="address"
-            placeholder="write your address"
-            required
-        ></textarea>
-        <button type="submit">
-            Send Message
-        </button>
-
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="message" placeholder="Your order" required></textarea>
+        <textarea id="address" placeholder="write your address" required></textarea>
+        <button type="submit">Send Message</button>
     </form>
-
-
     <div class="contact-info">
-
-        <p>
-            <b>Location:</b> Mosalane
-        </p>
-
-        <p>
-            <b>Phone:</b> 0300-2899964
-        </p>
-
-        <p>
-            <b>Email:</b> domrestaurant@example.com
-        </p>
-
+        <p><b>Location:</b> Mosalane</p>
+        <p><b>Phone:</b> 0300-2899964</p>
+        <p><b>Email:</b> domrestaurant@example.com</p>
     </div>
-
 </section>
 
 <footer>
-
-    <a
-        href="https://wa.me/923002899964"
-        class="whatsapp-btn"
-        target="_blank"
-    >
+    <a href="https://wa.me/923002899964" class="whatsapp-btn" target="_blank">
         <img src="whatsapp.png" alt="WhatsApp">
         Order on WhatsApp
     </a>
-
-    <p>
-        © 2026 DOM Restaurant. All Rights Reserved.
-    </p>
-
+    <p>© 2026 DOM Restaurant. All Rights Reserved.</p>
 </footer>
 
 <script src="script.js"></script>
-
 </body>
 </html>

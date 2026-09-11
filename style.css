@@ -1,416 +1,79 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  }
+* {margin: 0; padding: 0; box-sizing: border-box;}
+html {scroll-behavior: smooth;}
+body {font-family: Arial, sans-serif; background-color: #ffffff; color: #333333;}
 
-html {
-scroll-behavior: smooth;
-}
-
-body {
-font-family: Arial, sans-serif;
-background-color: #ffffff;
-color: #333333;
-}
-
-header {
-height: 80px;
-background-color: #ffffff;
-display: flex;
-align-items: center;
-justify-content: space-between;
-padding: 8px 6%;
-position: sticky;
-top: 0;
-z-index: 1000;
-border-bottom: 3px solid #e21b23;
-}
-
-.logo {
-display: flex;
-align-items: center;
-}
-
-.logo img {
-width: 65px;
-height: 65px;
-object-fit: contain;
-}
-
-nav {
-display: flex;
-align-items: center;
-gap: 30px;
-}
-
-nav a {
-color: #e21b23;
-text-decoration: none;
-font-size: 17px;
-font-weight: bold;
-}
-
-nav a:hover {
-color: #d5a900;
-}
-
-.right-top {
-display: flex;
-align-items: center;
-gap: 18px;
-margin-left: 30px;
-}
-
-.cart {
-font-size: 27px;
-color: #e21b23;
-cursor: pointer;
-}
-
-.menu-icon {
-font-size: 30px;
-color: #e21b23;
-cursor: pointer;
-}
+header {height: 80px; background-color: #ffffff; display: flex; align-items: center; justify-content: space-between; padding: 8px 6%; position: sticky; top: 0; z-index: 1000; border-bottom: 3px solid #e21b23;}
+.logo img {width: 65px; height: 65px; object-fit: contain;}
+nav {display: flex; align-items: center; gap: 30px;}
+nav a {color: #e21b23; text-decoration: none; font-size: 17px; font-weight: bold;}
+nav a:hover {color: #d5a900;}
+.menu-icon {display: none; font-size: 30px; color: #e21b23; cursor: pointer;}
 
 .main-banner {
-position: relative;
-width: 100%;
-min-height: 420px;
-overflow: hidden;
+    width: 100%;
+    overflow: hidden;
 }
-
 .banner {
-display: block;
-width: 100%;
-height: 420px;
-object-fit: cover;
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 
+.menu {width: 90%; max-width: 1100px; margin: auto; padding: 60px 0 80px; text-align: center;}
+.menu > h1 {color: #e21b23; font-size: 42px; margin-bottom: 10px;}
+.menu-intro {font-size: 17px; margin-bottom: 35px; color: #555555;}
+.menu-category {margin-bottom: 50px;}
+.menu-category h2 {text-align: left; font-size: 30px; color: #e21b23; background-color: #ffd400; padding: 10px 20px; border-radius: 8px; margin-bottom: 25px;}
+.menu-container {display: flex; justify-content: center; flex-wrap: wrap; gap: 25px;}
+.food {width: 300px; min-height: 390px; background-color: #ffffff; border: 3px solid #ffd400; border-radius: 15px; padding: 12px; text-align: center; box-shadow: 0 4px 12px rgba(226, 27, 35, 0.20); transition: 0.3s;}
+.food:hover {transform: translateY(-5px); box-shadow: 0 7px 18px rgba(226, 27, 35, 0.30);}
+.food img {width: 100%; height: 220px; object-fit: contain; border-radius: 10px; display: block; background-color: #ffffff;}
+.food h3 {font-size: 21px; color: #e21b23; margin: 12px 0 8px;}
+.food p {font-size: 15px; line-height: 1.5; margin-bottom: 10px;}
+.food .price {display: inline-block; font-size: 18px; font-weight: bold; color: #222222;}
+.food button {background-color: #e21b23; color: #ffffff; border: none; border-radius: 50%; width: 34px; height: 34px; font-size: 23px; margin-left: 8px; cursor: pointer; vertical-align: middle;}
+.food button:hover {background-color: #ffd400; color: #e21b23;}
 
-.menu {
-width: 90%;
-max-width: 1100px;
-margin: auto;
-padding: 60px 0 80px;
-text-align: center;
-}
+.about {background-color: #fff0a8; padding: 70px 15%; text-align: center;}
+.about h2 {color: #e21b23; font-size: 35px; margin-bottom: 15px;}
+.about p {max-width: 800px; margin: 15px auto; line-height: 1.7; font-size: 17px;}
 
-.menu > h1 {
-color: #e21b23;
-font-size: 42px;
-margin-bottom: 10px;
-}
+.contact {padding: 70px 8%; text-align: center;}
+.contact h2 {color: #e21b23; font-size: 35px; margin-bottom: 10px;}
+form {max-width: 600px; margin: 30px auto;}
+input, textarea {width: 100%; padding: 14px; margin-bottom: 15px; border: 1px solid #cccccc; border-radius: 5px; font-size: 16px; font-family: Arial, sans-serif;}
+input:focus, textarea:focus {outline: none; border: 2px solid #e21b23;}
+textarea {height: 150px; resize: none;}
+.contact button {background-color: #e21b23; color: #ffffff; border: none; padding: 13px 25px; font-size: 16px; font-weight: bold; border-radius: 6px; cursor: pointer;}
+.contact button:hover {background-color: #ffd400; color: #e21b23;}
+.contact-info {margin-top: 30px; line-height: 2;}
 
-.menu-intro {
-font-size: 17px;
-margin-bottom: 35px;
-color: #555555;
-}
-
-.menu-category {
-margin-bottom: 50px;
-}
-
-.menu-category h2 {
-text-align: left;
-font-size: 30px;
-color: #e21b23;
-background-color: #ffd400;
-padding: 10px 20px;
-border-radius: 8px;
-margin-bottom: 25px;
-}
-
-.menu-container {
-display: flex;
-justify-content: center;
-flex-wrap: wrap;
-gap: 25px;
-}
-
-.food {
-width: 300px;
-min-height: 390px;
-background-color: #ffffff;
-border: 3px solid #ffd400;
-border-radius: 15px;
-padding: 12px;
-text-align: center;
-box-shadow: 0 4px 12px rgba(226, 27, 35, 0.20);
-transition: 0.3s;
-}
-
-.food:hover {
-transform: translateY(-5px);
-box-shadow: 0 7px 18px rgba(226, 27, 35, 0.30);
-}
-
-.food img {
-width: 100%;
-height: 220px;
-object-fit: contain;
-border-radius: 10px;
-display: block;
-background-color: #ffffff;
-}
-
-.food h3 {
-font-size: 21px;
-color: #e21b23;
-margin: 12px 0 8px;
-}
-
-.food p {
-font-size: 15px;
-line-height: 1.5;
-margin-bottom: 10px;
-}
-
-.food .price {
-display: inline-block;
-font-size: 18px;
-font-weight: bold;
-color: #222222;
-}
-
-.food button {
-background-color: #e21b23;
-color: #ffffff;
-border: none;
-border-radius: 50%;
-width: 34px;
-height: 34px;
-font-size: 23px;
-margin-left: 8px;
-cursor: pointer;
-vertical-align: middle;
-}
-
-.food button:hover {
-background-color: #ffd400;
-color: #e21b23;
-}
-
-.about {
-background-color: #fff0a8;
-padding: 70px 15%;
-text-align: center;
-}
-
-.about h2 {
-color: #e21b23;
-font-size: 35px;
-margin-bottom: 15px;
-}
-
-.about p {
-max-width: 800px;
-margin: 15px auto;
-line-height: 1.7;
-font-size: 17px;
-}
-
-.contact {
-padding: 70px 8%;
-text-align: center;
-}
-
-.contact h2 {
-color: #e21b23;
-font-size: 35px;
-margin-bottom: 10px;
-}
-
-form {
-max-width: 600px;
-margin: 30px auto;
-}
-
-input,
-textarea {
-width: 100%;
-padding: 14px;
-margin-bottom: 15px;
-border: 1px solid #cccccc;
-border-radius: 5px;
-font-size: 16px;
-font-family: Arial, sans-serif;
-}
-
-input:focus,
-textarea:focus {
-outline: none;
-border: 2px solid #e21b23;
-}
-
-textarea {
-height: 150px;
-resize: none;
-}
-
-.contact button {
-background-color: #e21b23;
-color: #ffffff;
-border: none;
-padding: 13px 25px;
-font-size: 16px;
-font-weight: bold;
-border-radius: 6px;
-cursor: pointer;
-}
-
-.contact button:hover {
-background-color: #ffd400;
-color: #e21b23;
-}
-
-.contact-info {
-margin-top: 30px;
-line-height: 2;
-}
-
-footer {
-background-color: #e21b23;
-color: #ffffff;
-text-align: center;
-padding: 25px;
-}
-
-footer p {
-margin-top: 10px;
-}
-
-.whatsapp-btn {
-position: fixed;
-right: 25px;
-bottom: 20px;
-background-color: #e21b23;
-color: #ffffff;
-padding: 12px 18px;
-border-radius: 30px;
-display: flex;
-align-items: center;
-gap: 8px;
-text-decoration: none;
-font-weight: bold;
-font-size: 16px;
-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-z-index: 2000;
-}
-
-.whatsapp-btn img {
-width: 28px;
-height: 28px;
-object-fit: contain;
-}
-
-.whatsapp-btn:hover {
-background-color: #c90000;
-}
+footer {background-color: #e21b23; color: #ffffff; text-align: center; padding: 25px;}
+footer p {margin-top: 10px;}
+.whatsapp-btn {position: fixed; right: 25px; bottom: 20px; background-color: #e21b23; color: #ffffff; padding: 12px 18px; border-radius: 30px; display: flex; align-items: center; gap: 8px; text-decoration: none; font-weight: bold; font-size: 16px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); z-index: 2000;}
+.whatsapp-btn img {width: 28px; height: 28px; object-fit: contain;}
+.whatsapp-btn:hover {background-color: #c90000;}
 
 @media (max-width: 750px) {
-
-header {
-    height: auto;
-    min-height: 70px;
-    padding: 8px 15px;
-}
-
-.logo img {
-    width: 55px;
-    height: 55px;
-}
-
-nav {
-    gap: 12px;
-}
-
-nav a {
-    font-size: 14px;
-}
-
-.right-top {
-    gap: 10px;
-    margin-left: 15px;
-}
-
-.cart {
-    font-size: 23px;
-}
-
-.menu-icon {
-    font-size: 27px;
-}
-
-.hero {
-    min-height: 250px;
-}
-
-.banner {
-    height: 250px;
-}
-
-.hero-text h1 {
-    font-size: 30px;
-}
-
-.hero-text p {
-    font-size: 16px;
-}
-
-.menu {
-    width: 95%;
-    padding-top: 40px;
-}
-
-.menu > h1 {
-    font-size: 32px;
-}
-
-.menu-category h2 {
-    font-size: 25px;
-}
-
-.food {
-    width: 300px;
-}
-
-.about {
-    padding: 50px 8%;
-}
-
-.about h2,
-.contact h2 {
-    font-size: 30px;
-}
-
-.whatsapp-btn {
-    right: 15px;
-    bottom: 15px;
-    padding: 10px 14px;
-}
-
+header {padding: 8px 15px;}
+.logo img {width: 55px; height: 55px;}
+nav {gap: 12px;}
+nav a {font-size: 14px;}
+.menu {width: 95%; padding-top: 40px;}
+.menu > h1 {font-size: 32px;}
+.menu-category h2 {font-size: 25px;}
+.food {width: 100%; max-width: 350px;}
+.about {padding: 50px 8%;}
+.about h2, .contact h2 {font-size: 30px;}
+.whatsapp-btn {right: 15px; bottom: 15px; padding: 10px 14px;}
 }
 
 @media (max-width: 500px) {
-
-nav {
-    display: none;
-}
-
-.right-top {
-    margin-left: auto;
-}
-
-}
-
-.food {
-    width: 100%;
-    max-width: 320px;
-}
-
-.food img {
-    height: 210px;
+.menu-icon {display: block;}
+nav {display: none; position: absolute; top: 80px; left: 0; width: 100%; background: #ffffff; flex-direction: column; padding: 20px 0; border-top: 3px solid #e21b23; gap: 15px;}
+nav.show {display: flex;}
+nav a {text-align: center; padding: 10px 0;}
+.food {width: 100%; max-width: 320px;}
+.food img {height: 210px;}
 }
